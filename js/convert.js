@@ -45,7 +45,7 @@ function convertCurrency(amount, fromCurrency, toCurrency, cb) {
 function registerServiceWorker() {
     if (!navigator.serviceWorker)
         return;
-    navigator.serviceWorker.register('js/sw/index.js').then(function () {
+    navigator.serviceWorker.register('js/sw/sw.js').then(function () {
         console.log('registration worked!');
     }).catch(function () {
         console.log('registration failed!');

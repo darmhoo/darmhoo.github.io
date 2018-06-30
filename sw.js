@@ -13,10 +13,11 @@ self.addEventListener('install', function(event) {
         // Add cache the urls from urlsToCache
         caches.open('damola-v1').then(function (cache) {
             return cache.addAll([
-                '/',
-                '/css/main.css',
-                '/images/bg.jpg',
-                '/js/main.js'
+                'index.html',
+                'css/main.css',
+                'images/bg.jpg',
+                'js/main.js',
+                'js/index.js'
             ]);
         })
     );
@@ -25,4 +26,9 @@ self.addEventListener('install', function(event) {
 self.addEventListener('fetch', function(event) {
     // Leave this blank for now.
     // We'll get to this in the next task.
+    event.respondWith(
+        caches.match(event.request).then(function (response) {
+            return response || fetch(event.request);
+        })
+    );
 });
