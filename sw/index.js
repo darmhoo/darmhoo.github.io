@@ -14,9 +14,9 @@ self.addEventListener('install', function(event) {
         caches.open('damola-v1').then(function (cache) {
             return cache.addAll([
                 '/',
-                'css/main.css',
-                'images/bg.jpg',
-                'js/main.js'
+                '/css/main.css',
+                '/images/bg.jpg',
+                '/js/main.js'
             ]);
         })
     );
