@@ -13,8 +13,8 @@ class Main{
     registerServiceWorker(){
         if (!navigator.serviceWorker)
             return;
-        navigator.serviceWorker.register('sw/index.js').then(function () {
-            console.log('registration worked!');
+        navigator.serviceWorker.register('sw.js').then(function () {
+            console.log('registration worked again!');
         }).catch(function () {
             console.log('registration failed!');
         })
