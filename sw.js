@@ -1,5 +1,5 @@
 self.addEventListener('install', function(event) {
-    var urlsToCache = [
+    let urlsToCache = [
         '/',
         'js/main.js',
         'css/main.css',
