@@ -32,8 +32,8 @@ class Main{
             then(function (messages) {
                 objectStore.transaction.oncomplete = function (event) {
                     let currenciesObjectStore = db.transaction('countries', 'readwrite').objectStore('countries');
-                    messages.forEach(function (message) {
-                        currenciesObjectStore.add(message);
+                    messages['results'].forEach(function (message) {
+                        currenciesObjectStore.put(message);
                     })
                 }
             });
