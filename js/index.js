@@ -38,12 +38,7 @@ class Main{
                 }
             });
             
-            objectStore.transaction.oncomplete = function (event) {
-                let currenciesObjectStore = db.transaction('countries', 'readwrite').objectStore('countries');
-                messages.forEach(function (message) {
-                    currenciesObjectStore.add(message);
-                })
-            }
+
         }
     }
 
