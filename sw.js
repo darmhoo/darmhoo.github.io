@@ -17,7 +17,8 @@ self.addEventListener('install', function(event) {
                 'css/main.css',
                 'images/bg.jpg',
                 'js/main.js',
-                'js/index.js'
+                'js/index.js',
+                'images/overlay.png'
             ]);
         })
     );
